@@ -64,19 +64,26 @@ const AboutSection = () => {
             <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
             <div className="prose prose-lg text-muted-foreground space-y-4">
               <p>
-                Womaritime Experts (PTY) LTD stands at the forefront of Africa's maritime 
-                transformation. As a proudly women-led organization, we bring fresh perspectives 
-                and innovative solutions to traditional maritime challenges.
+                Womaritime Experts was born out of a deep understanding of both the operational 
+                and strategic needs of the maritime industry. After years at sea including making 
+                history as Africa's first female dredge master and later serving as Maritime 
+                Compliance Manager and Designated Person Ashore (DPA) for one of South Africa's 
+                largest state-owned entities, our founder, Londy Ngcobo, identified a crucial gap: 
+                the need for stronger alignment between onboard operations and shore-based strategy, 
+                and the visible underrepresentation of women in technical and advisory roles across 
+                the ocean economy.
               </p>
               <p>
-                Our integrated approach combines vessel support services, strategic advisory, 
-                and specialized training to create a comprehensive maritime ecosystem that 
-                drives growth, ensures safety, and promotes sustainability.
+                In response to the reality that women make up less than 2% of the maritime workforce, 
+                Womaritime Experts was founded not as a movement, but as a high-impact service company 
+                that delivers tangible results while championing greater representation.
               </p>
               <p>
-                With a steadfast commitment to excellence and a deep understanding of both 
-                local and global maritime requirements, we're building the future of 
-                Africa's ocean economy.
+                Today, our team of maritime professionals, consultants, and sector leaders reflects 
+                the strength, excellence, and diversity that continues to drive Africa's ocean economy 
+                forward. From boardrooms to shipyards, and from training rooms to global stages, we 
+                lead with purpose and the bold belief that transformation is not a side agenda—it is 
+                a strategic advantage.
               </p>
             </div>
 
@@ -131,12 +138,12 @@ const AboutSection = () => {
           <div className="text-center">
             <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Women-Led Excellence in Maritime
+              Maritime Professionals at Our Core
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Recognized for bringing innovative perspectives and technical excellence 
-              to Africa's maritime industry, setting new standards for inclusive 
-              leadership and sustainable practices.
+              At our core, we are maritime professionals and we look forward to bringing our 
+              expertise to your organization. One that the broader maritime ecosystem should 
+              not only recognize but take pride in supporting.
             </p>
           </div>
         </div>
