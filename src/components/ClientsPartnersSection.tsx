@@ -1,39 +1,6 @@
-import { Building2, Anchor, Ship, Globe, Award, Users } from "lucide-react";
+import clientsLogos from "@/assets/clients-logos-showcase.jpg";
 
 const ClientsPartnersSection = () => {
-  const clients = [
-    {
-      name: "African Port Authority",
-      logo: Building2,
-      category: "Port Operations"
-    },
-    {
-      name: "Maritime Safety Council",
-      logo: Anchor,
-      category: "Safety Standards"
-    },
-    {
-      name: "Continental Shipping Lines",
-      logo: Ship,
-      category: "Vessel Operations"
-    },
-    {
-      name: "Global Maritime Institute",
-      logo: Globe,
-      category: "Training & Certification"
-    },
-    {
-      name: "Ocean Excellence Awards",
-      logo: Award,
-      category: "Industry Recognition"
-    },
-    {
-      name: "Women in Maritime Network",
-      logo: Users,
-      category: "Professional Network"
-    }
-  ];
-
   return (
     <section className="py-20 bg-maritime-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,29 +35,13 @@ const ClientsPartnersSection = () => {
           </div>
         </div>
 
-        {/* Clients Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {clients.map((client, index) => {
-            const IconComponent = client.logo;
-            return (
-              <div
-                key={index}
-                className="group bg-white rounded-xl p-8 border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-gradient-ocean rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary mb-2">
-                    {client.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {client.category}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+        {/* Clients Logos Image */}
+        <div className="mb-16">
+          <img 
+            src={clientsLogos} 
+            alt="Our trusted clients and partners" 
+            className="w-full h-auto rounded-xl shadow-lg border border-border"
+          />
         </div>
 
         {/* Call to Action */}
