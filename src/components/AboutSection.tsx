@@ -15,18 +15,47 @@ const AboutSection = () => {
   const services = [
     {
       icon: Ship,
-      title: "Vessel Support",
-      description: "Comprehensive technical and operational support for maritime vessels"
+      title: "Vessel Support & Technical Services",
+      description: "Comprehensive technical and operational support for maritime vessels",
+      capabilities: [
+        "Successful coordination of dry docking and repair projects for highly operational vessels at South African ports",
+        "Ship medical supplies and certification",
+        "Ship chandling services with 48 hr turnaround",
+        "Crew changeover transportation and welfare support for regional shipping companies during peak season",
+        "Bunker fuel arrangements and port clearances for time-sensitive voyages",
+        "FFA & LSA servicing",
+        "Delivered tank cleaning and steelwork, and related ship repair services in line with SOLAS regulations"
+      ]
     },
     {
       icon: TrendingUp,
-      title: "Strategic Advisory",
-      description: "Expert guidance for maritime business development and optimization"
+      title: "Strategic Maritime Advisory",
+      description: "Expert guidance for maritime business development and optimization",
+      capabilities: [
+        "Full SOLAS (MLC, ISM, ISPS) Compliance accreditation project for 5 vessels from scratch",
+        "Inland Port readiness assessment and operational risk audit for regional logistics hub",
+        "WPS classification society compliance for steelwork companies",
+        "Classification society changeover to more reasonable, local, and reliable class",
+        "SMME services integration to client vendor databases to cut costs on larger service providers",
+        "Oceans economy strategy project for the KZN Government",
+        "Vessel Gross Management compliance"
+      ]
     },
     {
       icon: BookOpen,
-      title: "Specialized Training",
-      description: "Professional development programs for maritime industry excellence"
+      title: "Specialised Maritime Training",
+      description: "Professional development programs for maritime industry excellence",
+      capabilities: [
+        "Solved a non-accreditation failed maritime project of over 105 students",
+        "Full maritime courses SAMSA accreditations for a maritime college",
+        "Designed a Maritime New Venture Creation program for SMMEs",
+        "SOLAS Training for shipping companies (both crew and shore-based staff)",
+        "STCW training program facilitation",
+        "Work Readiness Program facilitation",
+        "Designed soft skills and leadership series tailored for shipping companies",
+        "Designed women in scarce skills training program",
+        "Boat manufacturing training"
+      ]
     }
   ];
 
@@ -131,7 +160,7 @@ const AboutSection = () => {
             <div className="space-y-6">
               {services.map((service, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 mb-4">
                     <div className="p-3 bg-gradient-ocean rounded-lg">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
@@ -139,10 +168,23 @@ const AboutSection = () => {
                       <h4 className="text-lg font-semibold text-foreground mb-2">
                         {service.title}
                       </h4>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground mb-3">
                         {service.description}
                       </p>
                     </div>
+                  </div>
+                  
+                  {/* Proven Capabilities */}
+                  <div className="ml-16">
+                    <h5 className="text-sm font-semibold text-foreground mb-2">Proven Capabilities:</h5>
+                    <ul className="space-y-1">
+                      {service.capabilities.map((capability, capIndex) => (
+                        <li key={capIndex} className="flex items-start space-x-2">
+                          <CheckCircle className="w-3 h-3 text-secondary flex-shrink-0 mt-0.5" />
+                          <span className="text-xs text-muted-foreground leading-relaxed">{capability}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </Card>
               ))}
