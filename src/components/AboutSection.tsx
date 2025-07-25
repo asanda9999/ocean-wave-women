@@ -9,6 +9,7 @@ import {
   Heart,
   CheckCircle
 } from "lucide-react";
+import founderImage from "@/assets/founder-image.jpg";
 
 const AboutSection = () => {
   const services = [
@@ -62,29 +63,52 @@ const AboutSection = () => {
           {/* Left Column - Story */}
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
-            <div className="prose prose-lg text-muted-foreground space-y-4">
-              <p>
-                Womaritime Experts was born out of a deep understanding of both the operational 
-                and strategic needs of the maritime industry. After years at sea including making 
-                history as Africa's first female dredge master and later serving as Maritime 
-                Compliance Manager and Designated Person Ashore (DPA) for one of South Africa's 
-                largest state-owned entities, our founder, Londy Ngcobo, identified a crucial gap: 
-                the need for stronger alignment between onboard operations and shore-based strategy, 
-                and the visible underrepresentation of women in technical and advisory roles across 
-                the ocean economy.
-              </p>
-              <p>
-                In response to the reality that women make up less than 2% of the maritime workforce, 
-                Womaritime Experts was founded not as a movement, but as a high-impact service company 
-                that delivers tangible results while championing greater representation.
-              </p>
-              <p>
-                Today, our team of maritime professionals, consultants, and sector leaders reflects 
-                the strength, excellence, and diversity that continues to drive Africa's ocean economy 
-                forward. From boardrooms to shipyards, and from training rooms to global stages, we 
-                lead with purpose and the bold belief that transformation is not a side agenda—it is 
-                a strategic advantage.
-              </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Founder Image */}
+              <div className="md:col-span-1">
+                <div className="relative">
+                  <img 
+                    src={founderImage} 
+                    alt="Londy Ngcobo - Founder of Womaritime Experts" 
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                </div>
+                <div className="mt-4 text-center">
+                  <h4 className="font-semibold text-foreground">Londy Ngcobo</h4>
+                  <p className="text-sm text-muted-foreground">Founder & CEO</p>
+                  <p className="text-xs text-muted-foreground mt-1">Africa's First Female Dredge Master</p>
+                </div>
+              </div>
+              
+              {/* Story Content */}
+              <div className="md:col-span-2">
+                <div className="prose prose-lg text-muted-foreground space-y-4">
+                  <p>
+                    Womaritime Experts was born out of a deep understanding of both the operational 
+                    and strategic needs of the maritime industry. After years at sea including making 
+                    history as Africa's first female dredge master and later serving as Maritime 
+                    Compliance Manager and Designated Person Ashore (DPA) for one of South Africa's 
+                    largest state-owned entities, our founder, Londy Ngcobo, identified a crucial gap: 
+                    the need for stronger alignment between onboard operations and shore-based strategy, 
+                    and the visible underrepresentation of women in technical and advisory roles across 
+                    the ocean economy.
+                  </p>
+                  <p>
+                    In response to the reality that women make up less than 2% of the maritime workforce, 
+                    Womaritime Experts was founded not as a movement, but as a high-impact service company 
+                    that delivers tangible results while championing greater representation.
+                  </p>
+                  <p>
+                    Today, our team of maritime professionals, consultants, and sector leaders reflects 
+                    the strength, excellence, and diversity that continues to drive Africa's ocean economy 
+                    forward. From boardrooms to shipyards, and from training rooms to global stages, we 
+                    lead with purpose and the bold belief that transformation is not a side agenda—it is 
+                    a strategic advantage.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Values Grid */}
