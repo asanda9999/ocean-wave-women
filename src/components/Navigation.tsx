@@ -39,9 +39,6 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button variant="maritime" size="sm">
-              Get Quote
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -70,11 +67,6 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 pt-2">
-                <Button variant="maritime" size="sm" className="w-full">
-                  Get Quote
-                </Button>
-              </div>
             </div>
           </div>
         )}

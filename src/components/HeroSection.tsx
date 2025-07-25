@@ -43,9 +43,6 @@ const HeroSection = () => {
                 Explore Our Services
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline-maritime" size="lg">
-                Get Consultation
-              </Button>
             </div>
 
             {/* Key Stats */}
