@@ -9,45 +9,41 @@ import {
   Clock,
   Send,
   MessageSquare,
-  Globe,
-  Linkedin
+  Globe
 } from "lucide-react";
 
 const ContactSection = () => {
   const contactInfo = [
     {
+      icon: Globe,
+      title: "Website",
+      details: "WWW.WOMARITIME.COM",
+      subtitle: "Visit our official website"
+    },
+    {
       icon: Mail,
       title: "Email Us",
-      details: "info@womaritimeexperts.com",
+      details: "INFO@WOMARITIME.COM",
       subtitle: "Quick response within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+27 (0) 11 XXX XXXX",
+      details: "+27(0) 71 879 5034",
       subtitle: "Monday - Friday, 8AM - 6PM"
     },
     {
       icon: MapPin,
-      title: "Visit Us",
-      details: "Cape Town, South Africa",
+      title: "Location",
+      details: "SOUTH AFRICA",
       subtitle: "Strategic maritime hub location"
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: "Mon - Fri: 8AM - 6PM",
-      subtitle: "Weekend emergency support available"
     }
   ];
 
   const services = [
     "Vessel Support Services",
     "Strategic Maritime Advisory",
-    "Professional Training Programs",
-    "Safety Compliance Consulting",
-    "Operational Optimization",
-    "Emergency Response Support"
+    "Professional Training Programs"
   ];
 
   return (
@@ -164,35 +160,6 @@ const ContactSection = () => {
                 </Card>
               ))}
             </div>
-
-            {/* Emergency Contact */}
-            <Card className="p-6 bg-gradient-gold text-white">
-              <h4 className="font-bold mb-2">24/7 Emergency Support</h4>
-              <p className="text-sm text-white/90 mb-4">
-                For urgent maritime assistance and emergency support services.
-              </p>
-              <Button variant="outline-maritime" size="sm" className="border-white text-white hover:bg-white hover:text-primary">
-                Emergency Hotline
-              </Button>
-            </Card>
-
-            {/* Social Links */}
-            <Card className="p-6">
-              <h4 className="font-semibold text-foreground mb-4">
-                Connect With Us
-              </h4>
-              <div className="flex space-x-3">
-                <Button variant="outline" size="icon">
-                  <Linkedin className="w-4 h-4" />
-                </Button>
-                <Button variant="outline" size="icon">
-                  <Globe className="w-4 h-4" />
-                </Button>
-                <Button variant="outline" size="icon">
-                  <Mail className="w-4 h-4" />
-                </Button>
-              </div>
-            </Card>
           </div>
         </div>
 

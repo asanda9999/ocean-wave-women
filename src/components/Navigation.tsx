@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import COMPLOGO from "@/assets/COMP-LOGO.png";
+
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,18 +16,16 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-maritime-accent z-50">
+    <nav className="fixed top-0 w-full bg-white backdrop-blur-sm border-b border-maritime-accent z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-ocean rounded-lg">
-              <Anchor className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <span className="text-lg font-bold text-primary">Womaritime Experts</span>
-              <span className="block text-xs text-muted-foreground">(PTY) LTD</span>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src={COMPLOGO} 
+              alt="Womaritime Experts Logo" 
+              className="h-20 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -34,9 +34,10 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
@@ -61,10 +62,11 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 group-hover:w-full transition-all duration-300"></span>
                 </a>
               ))}
             </div>

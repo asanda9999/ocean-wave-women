@@ -1,4 +1,4 @@
-import clientsLogos from "@/assets/clients-logos-showcase.jpg";
+import WMCLI from "@/assets/WMCLI.png";
 
 const ClientsPartnersSection = () => {
   return (
@@ -7,10 +7,10 @@ const ClientsPartnersSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Trusted by Industry Leaders
+            Clients and Partners 
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We partner with leading organizations across Africa's maritime ecosystem, 
+            We partner with leading organizations across the globe, 
             building lasting relationships based on excellence and mutual growth.
           </p>
         </div>
@@ -38,7 +38,7 @@ const ClientsPartnersSection = () => {
         {/* Clients Logos Image */}
         <div className="mb-16">
           <img 
-            src={clientsLogos} 
+            src={WMCLI} 
             alt="Our trusted clients and partners" 
             className="w-full h-auto rounded-xl shadow-lg border border-border"
           />

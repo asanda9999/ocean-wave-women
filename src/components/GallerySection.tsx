@@ -7,6 +7,9 @@ import maritimeTraining from "@/assets/maritime-training.jpg";
 import maritimePort from "@/assets/maritime-port.jpg";
 import maritimeConsultation from "@/assets/maritime-consultation.jpg";
 import maritimeWomenLeaders from "@/assets/maritime-women-leaders.jpg";
+import GY from "@/assets/GY.png";
+import WMGALL from "@/assets/WMGALL.png";
+
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -16,13 +19,15 @@ const GallerySection = () => {
       id: 1,
       title: "Womaritime Gallery",
       description: "Professional maritime services and expertise showcase",
-      category: "Womaritime"
+      category: "Womaritime",
+      image: WMGALL
     },
     {
       id: 2,
       title: "Global Maritime Youth Gallery", 
       description: "Youth development and training programs",
-      category: "Global Maritime Youth"
+      category: "Global Maritime Youth",
+      image: GY
     }
   ];
 
@@ -48,26 +53,36 @@ const GallerySection = () => {
         {/* Gallery Placeholder Sections */}
         <div className="grid gap-8 mb-12">
           {placeholderSections.map((section) => (
-            <Card 
-              key={section.id} 
-              className="overflow-hidden border-2 border-dashed border-muted-foreground/30"
-            >
-              <div className="relative">
-                {/* Placeholder Area */}
-                <div className="w-full h-64 bg-muted/50 flex items-center justify-center">
-                  <div className="text-center">
-                    <Camera className="w-12 h-12 text-muted-foreground/50 mx-auto mb-3" />
-                    <p className="text-sm text-muted-foreground font-medium">
-                      {section.category} Images
-                    </p>
-                    <p className="text-xs text-muted-foreground/70 mt-1">
-                      Upload your photos here
-                    </p>
-                  </div>
+            <>
+              <Card 
+                key={section.id} 
+                className="w-full max-w-2xl mx-auto overflow-hidden border-2 border-dashed border-muted-foreground/30 p-0"
+              >
+                <div className="w-full aspect-[16/9] relative">
+                  {/* Image or Placeholder Area */}
+                  {section.image ? (
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                      onClick={() => setSelectedImage(section.image)}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-muted/50 flex items-center justify-center aspect-[16/9]">
+                      <div className="text-center">
+                        <Camera className="w-12 h-12 text-muted-foreground/50 mx-auto mb-3" />
+                        <p className="text-sm text-muted-foreground font-medium">
+                          {section.category} Images
+                        </p>
+                        <p className="text-xs text-muted-foreground/70 mt-1">
+                          Upload your photos here
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-              
-              <div className="p-6">
+              </Card>
+              <div className="p-6 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   {section.title}
                 </h3>
@@ -75,7 +90,7 @@ const GallerySection = () => {
                   {section.description}
                 </p>
               </div>
-            </Card>
+            </>
           ))}
         </div>
 

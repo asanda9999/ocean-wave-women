@@ -7,9 +7,11 @@ import {
   TrendingUp, 
   Award, 
   Heart,
-  CheckCircle
+  CheckCircle,
+  Anchor
 } from "lucide-react";
-import founderImage from "@/assets/founder-image.jpg";
+import FOUNDIMG from "@/assets/FOUND-IMG-removebg-preview.png";
+import COMPLOGO from "@/assets/COMP-LOGO.png";
 
 const AboutSection = () => {
   const services = [
@@ -81,29 +83,43 @@ const AboutSection = () => {
 
         {/* Story Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
-          
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {/* Founder Image */}
-            <div className="md:col-span-1">
-              <div className="relative">
-                <img 
-                  src={founderImage} 
-                  alt="Londy Ngcobo - Founder of Womaritime Experts" 
-                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+          <div className="grid md:grid-cols-2 gap-0">
+                         {/* Left Column - White Background */}
+             <div className="bg-white p-4 md:p-8">
+               {/* Logo and Title */}
+               <div className="mb-6">
+                 <div className="text-center mb-1">
+                   <img 
+                     src={COMPLOGO} 
+                     alt="Womaritime Experts Logo" 
+                     className="h-20 w-auto mx-auto"
+                   />
+                 </div>
+                 
+                 <h3 className="text-2xl font-bold text-center mb-2" style={{ color: '#024b31' }}>Our Story</h3>
+                 <p className="text-sm text-center mb-6" style={{ color: '#024b31' }}>Founded in 2019</p>
+               </div>
+              
+              {/* Founder Image */}
+              <div className="text-center mb-6">
+                <div className="w-64 h-64 mx-auto mb-4">
+                  <img 
+                    src={FOUNDIMG} 
+                    alt="Londy Ngcobo - Founder of Womaritime Experts" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="w-16 h-0.5 mx-auto mb-4" style={{ backgroundColor: '#024b31' }}></div>
+                <h4 className="font-semibold text-lg" style={{ color: '#024b31' }}>Londy Ngcobo</h4>
+                <p className="text-sm" style={{ color: '#024b31' }}>CEO of Womaritime Experts and Founder Global Maritime Youth</p>
               </div>
-              <div className="mt-4 text-center">
-                <h4 className="font-semibold text-foreground">Londy Ngcobo</h4>
-                <p className="text-sm text-muted-foreground">Founder & CEO</p>
-                <p className="text-xs text-muted-foreground mt-1">Africa's First Female Dredge Master</p>
-              </div>
+              
+              
             </div>
             
-            {/* Story Content */}
-            <div className="md:col-span-2">
-              <div className="prose prose-lg text-muted-foreground space-y-4">
+            {/* Right Column - Dark Green Background */}
+            <div className="p-8 md:p-12" style={{ backgroundColor: '#024b31' }}>
+              <div className="text-white space-y-4">
                 <p>
                   Womaritime Experts was born out of a deep understanding of both the operational 
                   and strategic needs of the maritime industry. After years at sea including making 
@@ -126,10 +142,18 @@ const AboutSection = () => {
                   lead with purpose and the bold belief that transformation is not a side agenda—it is 
                   a strategic advantage.
                 </p>
+                <p>
+                  We believe that this transformation should be recognized and supported by the broader 
+                  maritime ecosystem, as it represents not just progress, but a fundamental shift toward 
+                  a more inclusive and effective industry.
+                </p>
+                <p>
+                  Thank you for your interest in our story. We are maritime professionals first, and 
+                  we look forward to offering our expertise to help drive your maritime initiatives forward.
+                </p>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Services Section */}
@@ -168,12 +192,6 @@ const AboutSection = () => {
             ))}
           </div>
 
-          <div className="mt-8">
-            <Button variant="maritime" size="lg" className="w-full sm:w-auto">
-              <Users className="w-5 h-5 mr-2" />
-              Meet Our Team
-            </Button>
-          </div>
         </div>
 
         {/* Awards & Recognition */}

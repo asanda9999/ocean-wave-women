@@ -24,10 +24,8 @@ const Footer = () => {
 
   const services = [
     "Vessel Support Services",
-    "Strategic Advisory",
-    "Specialized Training",
-    "Safety Compliance",
-    "Emergency Response"
+    "Strategic Maritime Advisory",
+    "Professional Training Programs"
   ];
 
   return (
@@ -56,16 +54,20 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
+                  <Globe className="w-4 h-4 text-secondary" />
+                  <span className="text-sm">WWW.WOMARITIME.COM</span>
+                </div>
+                <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-secondary" />
-                  <span className="text-sm">info@womaritimeexperts.com</span>
+                  <span className="text-sm">INFO@WOMARITIME.COM</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-secondary" />
-                  <span className="text-sm">+27 (0) 11 XXX XXXX</span>
+                  <span className="text-sm">+27(0) 71 879 5034</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-secondary" />
-                  <span className="text-sm">Cape Town, South Africa</span>
+                  <span className="text-sm">SOUTH AFRICA</span>
                 </div>
               </div>
             </div>
