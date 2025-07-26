@@ -59,14 +59,6 @@ const AboutSection = () => {
     }
   ];
 
-  const values = [
-    "Technical Excellence",
-    "Safety First",
-    "Sustainable Practices",
-    "Women Leadership",
-    "Global Standards",
-    "Innovation Focus"
-  ];
 
   return (
     <section id="about" className="py-20 bg-maritime-light">
@@ -138,18 +130,6 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Values Grid */}
-          <div className="mt-8">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Our Core Values</h4>
-            <div className="grid grid-cols-2 gap-3">
-              {values.map((value, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0" />
-                  <span className="text-sm text-muted-foreground">{value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Services Section */}
