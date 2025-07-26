@@ -11,34 +11,18 @@ import maritimeWomenLeaders from "@/assets/maritime-women-leaders.jpg";
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const galleryItems = [
+  const placeholderSections = [
     {
       id: 1,
-      image: maritimeTraining,
-      title: "Professional Training Programs",
-      category: "Training",
-      description: "Comprehensive maritime education and certification programs"
+      title: "Womaritime Gallery",
+      description: "Professional maritime services and expertise showcase",
+      category: "Womaritime"
     },
     {
       id: 2,
-      image: maritimePort,
-      title: "Port Operations Excellence",
-      category: "Operations",
-      description: "Efficient vessel management and port facility coordination"
-    },
-    {
-      id: 3,
-      image: maritimeConsultation,
-      title: "Strategic Consultation",
-      category: "Advisory",
-      description: "Expert guidance for maritime business development"
-    },
-    {
-      id: 4,
-      image: maritimeWomenLeaders,
-      title: "Women Maritime Leadership",
-      category: "Leadership",
-      description: "Pioneering women professionals driving industry change"
+      title: "Global Maritime Youth Gallery", 
+      description: "Youth development and training programs",
+      category: "Global Maritime Youth"
     }
   ];
 
@@ -61,43 +45,34 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-          {galleryItems.map((item) => (
+        {/* Gallery Placeholder Sections */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {placeholderSections.map((section) => (
             <Card 
-              key={item.id} 
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onClick={() => setSelectedImage(item.image)}
+              key={section.id} 
+              className="overflow-hidden border-2 border-dashed border-muted-foreground/30"
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-maritime-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-xs text-secondary font-medium bg-white/20 px-2 py-1 rounded">
-                          {item.category}
-                        </span>
-                      </div>
-                      <Button size="icon" variant="ghost" className="text-white hover:bg-white/20">
-                        <ZoomIn className="w-4 h-4" />
-                      </Button>
-                    </div>
+              <div className="relative">
+                {/* Placeholder Area */}
+                <div className="w-full h-64 bg-muted/50 flex items-center justify-center">
+                  <div className="text-center">
+                    <Camera className="w-12 h-12 text-muted-foreground/50 mx-auto mb-3" />
+                    <p className="text-sm text-muted-foreground font-medium">
+                      {section.category} Images
+                    </p>
+                    <p className="text-xs text-muted-foreground/70 mt-1">
+                      Upload your photos here
+                    </p>
                   </div>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {item.title}
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {section.title}
                 </h3>
                 <p className="text-muted-foreground">
-                  {item.description}
+                  {section.description}
                 </p>
               </div>
             </Card>
