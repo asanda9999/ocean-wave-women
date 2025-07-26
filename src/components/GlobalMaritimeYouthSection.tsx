@@ -105,23 +105,6 @@ const GlobalMaritimeYouthSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-ocean rounded-3xl p-8 md:p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Become Our CSI Partner</h3>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join us in shaping the next generation of maritime leaders and 
-            driving sustainable ocean economy growth across Africa.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="gold" size="lg" className="group">
-              Partner With Us
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline-maritime" size="lg">
-              Learn More About GMY
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
