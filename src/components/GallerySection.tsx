@@ -46,7 +46,7 @@ const GallerySection = () => {
         </div>
 
         {/* Gallery Placeholder Sections */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid gap-8 mb-12">
           {placeholderSections.map((section) => (
             <Card 
               key={section.id} 
