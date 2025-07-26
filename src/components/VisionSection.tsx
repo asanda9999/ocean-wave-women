@@ -115,28 +115,6 @@ const VisionSection = () => {
           </div>
         </div>
 
-        {/* Future Goals */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Building Tomorrow's Maritime Industry
-            </h3>
-            <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Our commitment extends beyond today's operations. We're actively 
-              building the infrastructure, relationships, and innovations that 
-              will define Africa's maritime future for generations to come.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="gold" size="lg" className="group">
-                Join Our Journey
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline-maritime" size="lg">
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
