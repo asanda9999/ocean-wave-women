@@ -10,8 +10,9 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Vision", href: "#vision" },
-    { name: "Gallery", href: "#gallery" },
+    { name: "Expertise", href: "#expertise" },
+    { name: "Impact", href: "#impact" },
+    { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
   ];
 
